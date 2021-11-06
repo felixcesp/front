@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Reto 5 </title>
+</head>
+
+<body>
+
+    <body style="background-color:#048888;"></body>
+
+    <h1>
+        <p style="color:rgb(241, 252, 241);" align="center">
+            <B><i>POR FAVOR INGRESA TU USUARIO</B>
+            </i>
+        </p>
+    </h1>
+    <h2>
+        <p style="color:rgb(233, 229, 33);" align="center">
+            <b><br>Es un gusto darte la bienvenida</b>
+        </p>
+    </h2>
+    <br><br> <br> <br>
+
+
+    <h3>Para efectos de revisión del código: usuario= admin contraseña= 12345 </h3>
+
+    <form name="login">
+        <table width="200" border="0">
+            <tr>
+                <th scope="row">
+                    <h2>Usuario</h2>
+                </th>
+                <td><span class="cnt"> 
+           <input name="usuario" type="text" class="Input" value="" size="20" /> 
+         </span></td>
+            </tr>
+            <tr>
+                <th height="33" scope="row">
+                    <h2>Contraseña</h2>
+                </th>
+                <td><span class="cnt"> 
+           <input name="password" type="password" class="Input" value="" size="20" /> 
+         </span></td>
+                <td><span class="cnt"> 
+           <input value="Entrar" target="_parent" onclick="Login()" type="button" class="boton"/> <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" /></th>
+         </span></td>
+            </tr>
+            <!--<tr>
+                <th scope="row"><input type="reset" name="Borrar" id="Borrar" value="Reset" class="boton" /></th>
+            </tr>-->
+        </table>
+    </form>
+
+    <script language="JavaScript">
+        function Login() {
+            var done = 0;
+            var usuario = document.login.usuario.value;
+            var password = document.login.password.value;
+            if (usuario == "admin" && password == "12345") {
+                window.location = " menu.html";
+            }
+
+            if (usuario != "admin" || password != "12345") {
+                alert("Usuario o contraseña incorrecta");
+            }
+
+            if (usuario == "" && password == "") {
+                window.location = "errorpopup.html"
+
+            }
+        }
+    </script>
+    <footer class="footer">
+        <p style="color:rgb(236, 223, 29);" align="right" :0><b><br><br><br><br><br><br><br><br>FELIX CESPEDES GRUPO G38 &nbsp&nbsp</b>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
